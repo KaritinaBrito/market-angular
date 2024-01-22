@@ -1,0 +1,146 @@
+[
+  {
+    "_id": "1",
+    "name": "Earphones",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "category": ["Microphone", "Technology"],
+    "imageUrl": [
+      "../../assets/img/products/technology/1.jpg",
+      "../../assets/img/products/technology/2.jpg",
+      "../../assets/img/products/technology/3.jpg",
+      "../../assets/img/products/technology/4.jpg"
+    ],
+    "price": 225,
+    "regular_price": 310,
+    "created_at": "2022-03-14T16:51:01.214X",
+    "slug": "type-earphones"
+  },
+  {
+    "_id": "2",
+    "name": "Microphone",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "category": ["Microphone", "Technology"],
+    "imageUrl": [
+      "../../assets/img/products/technology/2.jpg",
+      "../../assets/img/products/technology/1.jpg",
+      "../../assets/img/products/technology/3.jpg",
+      "../../assets/img/products/technology/4.jpg"
+    ],
+    "price": 320,
+    "regular_price": 400,
+    "created_at": "2022-03-14T16:51:01.214X",
+    "slug": "type-microphone"
+  },
+  {
+    "_id": "3",
+    "name": "Computer",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "category": ["PC", "Technology"],
+    "imageUrl": [
+      "../../assets/img/products/technology/4.jpg",
+      "../../assets/img/products/technology/1.jpg",
+      "../../assets/img/products/technology/2.jpg",
+      "../../assets/img/products/technology/3.jpg"
+    ],
+    "price": 10505,
+    "regular_price": 12999,
+    "created_at": "2022-03-14T16:51:01.214X",
+    "slug": "type-pc"
+  },
+  {
+    "_id": "4",
+    "name": "keyboard",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "category": ["PC", "Technology"],
+    "imageUrl": [
+      "../../assets/img/products/technology/3.jpg",
+      "../../assets/img/products/technology/1.jpg",
+      "../../assets/img/products/technology/2.jpg",
+      "../../assets/img/products/technology/4.jpg"
+    ],
+    "price": 95,
+    "regular_price": 100,
+    "created_at": "2022-03-14T16:51:01.214X",
+    "slug": "type-keyboard"
+  },
+  {
+    "_id": "5",
+    "name": "Tablet Samsung Galaxy S6",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "category": ["Tablets", "Technology"],
+    "imageUrl": [
+      "../../assets/img/products/technology/5.jpg",
+      "../../assets/img/products/technology/2.jpg",
+      "../../assets/img/products/technology/3.jpg",
+      "../../assets/img/products/technology/4.jpg"
+    ],
+    "price": 2500,
+    "regular_price": 3100,
+    "created_at": "2022-03-14T16:51:01.214X",
+    "slug": "type-tablet"
+  },
+  {
+    "_id": "6",
+    "name": "Smartwatch Swiss Code Square II unisex",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "category": ["Smartwatch", "Technology"],
+    "imageUrl": [
+      "../../assets/img/products/technology/6.jpg",
+      "../../assets/img/products/technology/2.jpg",
+      "../../assets/img/products/technology/3.jpg",
+      "../../assets/img/products/technology/4.jpg"
+    ],
+    "price": 699,
+    "regular_price": 1599,
+    "created_at": "2022-03-14T16:51:01.214X",
+    "slug": "type-smartwatch"
+  },
+  {
+    "_id": "7",
+    "name": "Cámara Instantánea Fujifilm Instax Mini 12",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "category": ["Camera", "Technology"],
+    "imageUrl": [
+      "../../assets/img/products/technology/7.jpg",
+      "../../assets/img/products/technology/2.jpg",
+      "../../assets/img/products/technology/3.jpg",
+      "../../assets/img/products/technology/4.jpg"
+    ],
+    "price": 2099,
+    "regular_price": 2799,
+    "created_at": "2022-03-14T16:51:01.214X",
+    "slug": "type-earphones"
+  },
+  {
+    "_id": "8",
+    "name": "Lentes de realidad virtual Oculus para multiplataforma",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "category": ["VR Glasses", "Technology"],
+    "imageUrl": [
+      "../../assets/img/products/technology/8.jpg",
+      "../../assets/img/products/technology/2.jpg",
+      "../../assets/img/products/technology/3.jpg",
+      "../../assets/img/products/technology/4.jpg"
+    ],
+    "price": 13100,
+    "regular_price": 15900,
+    "created_at": "2022-03-14T16:51:01.214X",
+    "slug": "type-vr-glasses"
+  },
+  {
+    "_id": "9",
+    "name": "Motherboard Biostar B550MH AM4 Ryzen B550MH",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "category": ["Motherboard", "Technology"],
+    "imageUrl": [
+      "../../assets/img/products/technology/9.jpg",
+      "../../assets/img/products/technology/2.jpg",
+      "../../assets/img/products/technology/3.jpg",
+      "../../assets/img/products/technology/4.jpg"
+    ],
+    "price": 1499,
+    "regular_price": 1899,
+    "created_at": "2022-03-14T16:51:01.214X",
+    "slug": "type-motherboard"
+  }
+]
