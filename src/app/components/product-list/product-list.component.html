@@ -1,0 +1,8 @@
+<div class="flex flex-wrap -m-4 justify-center">
+  @for (item of product; track item) {
+  <app-product-item [product]="item"></app-product-item>
+  }
+  @if (!product.length) {
+  <app-not-found></app-not-found>
+  }
+</div>

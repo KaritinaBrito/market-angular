@@ -1,32 +1,13 @@
-import { Component, OnInit, inject } from '@angular/core';
-import { ProductService } from '../../services/product.service';
+import { Component } from '@angular/core';
+import { ProductListComponent } from '../../components/product-list/product-list.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [ ProductListComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent implements OnInit{
-  private productsService = inject(ProductService);
+export class HomeComponent {
 
-  product: any;
-  constructor(){}
-
-  ngOnInit(): void {
-    this.productsService.getProduct()
-      .subscribe({
-        next: (product: any) =>{
-          this.product = product;
-          console.log(this.product);
-        },
-        error: ( err: any) => {
-          console.error(err);
-        },
-        complete: () => {
-          console.log('completed')
-        }
-      })
-  }
 }
