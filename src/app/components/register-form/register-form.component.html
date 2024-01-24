@@ -1,0 +1,91 @@
+@if (!showRegister) {
+<form (ngSubmit)="validateUser()" [formGroup]="formUser" novalidate
+  class="lg:w-6/6 md:w-2/2 bg-gray-100 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0">
+  <h2 class="text-gray-900 text-lg font-medium title-font mb-5">Enter Your Data</h2>
+  <div class="relative mb-4">
+    <label for="email" class="leading-7 text-sm text-gray-600">Correo electrónico</label>
+    <input type="email" id="email" name="email"
+      class="w-full bg-white rounded border border-gray-300 focus:border-pink-500 focus:ring-2 focus:ring-pink-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+      formControlName="email" required>
+    @if (formUser.controls['email'].invalid && formUser.controls['email'].dirty ||
+    formUser.controls['email'].touched) {
+    <div>
+      @if (formUser.controls['email'].errors) {
+      <p class="text-danger text-sm">Email Incorrect</p>
+      }
+    </div>
+    }
+  </div>
+  <button
+    class="text-white bg-pink border-0 py-2 px-8 focus:outline-none hover:bg-pink-600 rounded text-lg">Continue</button>
+  <p class="text-xs text-gray-500 mt-3">Literally you probably haven't heard of them jean shorts.</p>
+</form>
+}@else {
+<form (ngSubmit)="register()" [formGroup]="registerForm" novalidate
+  class="lg:w-6/6 md:w-2/2 bg-gray-100 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0">
+  <h2 class="text-gray-900 text-lg font-medium title-font mb-5">Registrarse</h2>
+  <div class="relative mb-4">
+    <label for="name" class="leading-7 text-sm text-gray-600">Nombre completo</label>
+    <input type="text" id="name" name="name"
+      class="w-full bg-white rounded border border-gray-300 focus:border-pink-500 focus:ring-2 focus:ring-pink-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+      formControlName="name" required>
+    @if (registerForm.controls['name'].invalid && registerForm.controls['name'].dirty ||
+    registerForm.controls['name'].touched) {
+    <div>
+      @if (registerForm.controls['name'].errors) {
+      <p class="text-danger text-sm">Min 8 characters</p>
+      }
+    </div>
+    }
+  </div>
+  <div class="relative mb-4">
+    <label for="email" class="leading-7 text-sm text-gray-600">Correo electrónico</label>
+    <input type="email" id="email" name="email"
+      class="w-full bg-white rounded border border-gray-300 focus:border-pink-500 focus:ring-2 focus:ring-pink-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+      formControlName="email" required>
+    @if (registerForm.controls['email'].invalid && registerForm.controls['email'].dirty ||
+    registerForm.controls['email'].touched) {
+    <div>
+      @if (registerForm.controls['email'].errors) {
+      <p class="text-danger text-sm">Email Incorrect</p>
+      }
+    </div>
+    }
+  </div>
+  <div class="relative mb-4">
+    <label for="password" class="leading-7 text-sm text-gray-600">Contaseña</label>
+    <input type="password" id="password" name="password"
+      class="w-full bg-white rounded border border-gray-300 focus:border-pink-500 focus:ring-2 focus:ring-pink-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+      formControlName="password" required autocomplete="off">
+    @if (registerForm.controls['password'].invalid && registerForm.controls['password'].dirty ||
+    registerForm.controls['password'].touched) {
+    <div>
+      @if (registerForm.controls['password'].errors) {
+      <p class="text-danger text-sm">This field should be greater than 6 characters</p>
+      }
+    </div>
+    }
+  </div>
+  <div class="relative mb-4">
+    <label for="confirmPassword" class="leading-7 text-sm text-gray-600">Confirmar contraseña</label>
+    <input type="password" id="confirmPassword" name="confirmPassword"
+      class="w-full bg-white rounded border border-gray-300 focus:border-pink-500 focus:ring-2 focus:ring-pink-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+      formControlName="confirmPassword" required autocomplete="off">
+    @if (registerForm.controls['confirmPassword'].invalid && registerForm.controls['confirmPassword'].dirty ||
+    registerForm.controls['confirmPassword'].touched) {
+    <div>
+      @if (registerForm.controls['confirmPassword'].touched) {
+      @if(registerForm.hasError('mismatch')){
+      <p class="font-medium text-red-500 text-xs mt-1 ml-1">
+        The password are not the same
+      </p>
+      }
+      }
+    </div>
+    }
+  </div>
+  <button type="submit"
+    class="text-white bg-pink border-0 py-2 px-8 focus:outline-none hover:bg-pink-600 rounded text-lg">Register</button>
+  <p class="text-xs text-gray-500 mt-3">Literally you probably haven't heard of them jean shorts.</p>
+</form>
+}
