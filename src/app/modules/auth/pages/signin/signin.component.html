@@ -2,11 +2,26 @@
   <section class="text-gray-600 body-font">
     <div class="container px-5 py-24 mx-auto flex flex-wrap items-center justify-around">
       <div class="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0">
-        <h1 class="title-font font-medium text-3xl text-gray-900">Slow-carb next level shoindcgoitch ethical authentic,
-          poko scenester</h1>
-        <p class="leading-relaxed mt-4">Poke slow-carb mixtape knausgaard, typewriter street art gentrify hammock
-          starladder roathse. Craies vegan tousled etsy austin.</p>
+        <h1 class="title-font font-medium text-3xl text-gray-900">This is an online store, where it is necessary to have
+          an account.</h1>
+        <div class="flex flex-col items-center">
+          <p class="leading-relaxed mt-4">You can register a new account, recover your password or you can use the
+            test account</p>
+          @if(!dataTest){
+          <button (click)="showUser()"
+            class="text-white bg-pink border-0 py-2 px-8 focus:outline-none hover:bg-pink-600 rounded text-lg hover:bg-fuchsia-700 mt-5">Show
+            me test account</button>
+          }
+          @if(dataTest){
+          <button (click)="showUser()"
+            class="mt-5 border-dobled border-2 border-pink p-4 text-center rounded-lg bg-gray-100 hover:border-fuchsia-700">
+            <p><strong>{{user}}</strong></p>
+            <p><strong>"changeme"</strong></p>
+          </button>
+          }
+        </div>
       </div>
+
       <app-login-form></app-login-form>
     </div>
   </section>

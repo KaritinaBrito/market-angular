@@ -3,13 +3,13 @@ import { FormBuilder, FormsModule, ReactiveFormsModule, Validators } from '@angu
 import { CustomValidators } from '../../../../utils/validators';
 
 import { RequestStatus } from '../../../../models/request-status.model';
-import { Router } from '@angular/router';
+import { Router, RouterLinkWithHref } from '@angular/router';
 import { AuthService } from '../../../../services/auth.service';
 
 @Component({
   selector: 'app-register-form',
   standalone: true,
-  imports: [FormsModule, ReactiveFormsModule],
+  imports: [FormsModule, ReactiveFormsModule, RouterLinkWithHref],
   templateUrl: './register-form.component.html',
   styleUrl: './register-form.component.css'
 })

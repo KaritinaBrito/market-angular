@@ -30,10 +30,10 @@ export class ForgotPasswordFormComponent {
       this.authService.recovery(email)
       .subscribe({
         next: ()=>{
-          this.status = 'success'
+          this.status = 'success';
         },
         error: ()=>{
-          this.status = 'failed'
+          this.status = 'failed';
         }
       })
     } else{

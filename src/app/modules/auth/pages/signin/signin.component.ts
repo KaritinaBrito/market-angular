@@ -11,5 +11,10 @@ import { FooterComponent } from '../../../home/components/footer/footer.componen
   styleUrl: './signin.component.css'
 })
 export class SigninComponent {
+  user: string = 'nicolas@mail.com';
+  dataTest: boolean = false;
 
+  showUser(){
+    this.dataTest = !this.dataTest;
+  }
 }

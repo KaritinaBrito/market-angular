@@ -18,7 +18,7 @@
   </div>
   <button
     class="text-white bg-pink border-0 py-2 px-8 focus:outline-none hover:bg-pink-600 rounded text-lg">Continue</button>
-  <p class="text-xs text-gray-500 mt-3">Literally you probably haven't heard of them jean shorts.</p>
+  <a class="text-xs text-gray-500 mt-3 hover:text-pink text-center" routerLink="/sign-in">Return to Log In</a>
 </form>
 }@else {
 <form (ngSubmit)="register()" [formGroup]="registerForm" novalidate
@@ -86,6 +86,6 @@
   </div>
   <button type="submit"
     class="text-white bg-pink border-0 py-2 px-8 focus:outline-none hover:bg-pink-600 rounded text-lg">Register</button>
-  <p class="text-xs text-gray-500 mt-3">Literally you probably haven't heard of them jean shorts.</p>
+  <a class="text-xs text-gray-500 mt-3 hover:text-pink" routerLink="/sign-in">Return to Log In</a>
 </form>
 }

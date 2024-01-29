@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit, inject } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLinkWithHref } from '@angular/router';
 import { Product } from '../../../../models/product.model';
 import { Subscription } from 'rxjs';
 import { ProductService } from '../../../../services/product.service';
@@ -9,7 +9,7 @@ import { PaymentCardComponent } from '../payment-card/payment-card.component';
 @Component({
   selector: 'app-product-details',
   standalone: true,
-  imports: [CurrencyPipe, PercentPipe, PaymentCardComponent],
+  imports: [CurrencyPipe, PercentPipe, PaymentCardComponent, RouterLinkWithHref],
   templateUrl: './product-details.component.html',
   styleUrl: './product-details.component.css'
 })
