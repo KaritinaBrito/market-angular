@@ -5,6 +5,7 @@ import { switchMap, tap } from 'rxjs';
 import { environment } from '../../environments/environment';
 import { TokenService } from './token.service';
 import { ResponseLogin } from '../models/auth.model';
+import { User } from '../models/user.model';
 
 @Injectable({
   providedIn: 'root'
@@ -16,14 +17,14 @@ export class AuthService {
 
   constructor() { }
 
-  login(email: string, password: string){
+  login(email: string, password: string) {
     return this.http.post<ResponseLogin>(`${this.apiUrl}api/v1/auth/login`, {
       email,
       password
     })
     .pipe(
       tap(response => {
-        this.tokenService.saveToken(response.access_token)
+        this.tokenService.saveToken(response.access_token);
       })
     )
   }
@@ -53,6 +54,15 @@ export class AuthService {
 
   changePassword(token: string, newPassword: string){
     return this.http.post(`${this.apiUrl}api/v1/auth/change-password`, {token,newPassword});
+  }
+
+  getProfile(){
+    const token = this.tokenService.getToken();
+    return this.http.get<User>(`${this.apiUrl}api/v1/auth/profile`, {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    });
   }
 
   logout(){

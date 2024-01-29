@@ -1,38 +1,22 @@
 import { Routes } from '@angular/router';
-import { SigninComponent } from './components/auth/signin/signin.component';
-import { SignupComponent } from './components/auth/signup/signup.component';
-import { HomeComponent } from './pages/home/home.component';
+import { SigninComponent } from './modules/auth/pages/signin/signin.component';
+import { SignupComponent } from './modules/auth/pages/signup/signup.component';
+import { HomeComponent } from './modules/home/pages/home/home.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
-import { ProductDetailsComponent } from './pages/product-details/product-details.component';
-import { RecoveryPasswordComponent } from './components/auth/recovery-password/recovery-password.component';
-import { ForgotPasswordComponent } from './components/auth/forgot-password/forgot-password.component';
+import { ProductDetailsComponent } from './modules/home/components/product-details/product-details.component';
+import { RecoveryPasswordComponent } from './modules/auth/pages/recovery-password/recovery-password.component';
+import { ForgotPasswordComponent } from './modules/auth/pages/forgot-password/forgot-password.component';
 import { authGuard } from './guards/auth.guard';
 import { redirectGuard } from './guards/redirect.guard';
 
 export const routes: Routes = [
   {
     path: '',
-    component: HomeComponent
+    loadChildren: () => import('./modules/auth/auth.module').then((m) => m.AuthModule),
   },
   {
-    path: 'product/:id',
-    component: ProductDetailsComponent
-  },
-  {
-    path: 'sign-in',
-    component: SigninComponent
-  },
-  {
-    path: 'sign-up',
-    component: SignupComponent
-  },
-  {
-    path: 'recovery-password',
-    component: RecoveryPasswordComponent
-  },
-  {
-    path: 'forgot-password',
-    component: ForgotPasswordComponent
+    path: 'home',
+    loadChildren: () => import('./modules/home/layout.module').then((m) => m.LayoutModule),
   },
   {
     path: '**',
