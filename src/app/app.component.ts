@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, inject } from '@angular/core';
+import { CommonModule, DOCUMENT } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { FooterComponent } from './modules/home/components/footer/footer.component';
 import { HeaderComponent } from './modules/home/components/header/header.component';
@@ -12,5 +12,6 @@ import { HomeComponent } from './modules/home/pages/home/home.component';
   template: '<router-outlet></router-outlet>'
 })
 export class AppComponent {
+  private document = inject(DOCUMENT);
   title = 'market';
 }

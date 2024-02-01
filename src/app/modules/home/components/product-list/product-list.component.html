@@ -1,8 +1,10 @@
-<div class="flex flex-wrap -m-4 justify-center">
-  @for (item of product; track item) {
-  <app-product-item [product]="item"></app-product-item>
-  }
-  @if (!product.length) {
-  <app-not-found></app-not-found>
-  }
+<div class="container">
+  <div class="flex flex-wrap -m-4 justify-center">
+    @for (item of productSignal(); track item) {
+    <app-product-item [product]="item" (addToCart)="addToCart($event)"></app-product-item>
+    }
+    @if (productSignal.length < 0) { <app-not-found></app-not-found>
+      }
+  </div>
+
 </div>

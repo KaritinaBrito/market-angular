@@ -4,6 +4,8 @@
       [src]="product ? product.imageUrl[0] : ''" [alt]="product?.name?.substring(0,20)"
       [routerLink]="['product', product?.slug]">
   </a>
+  <button class="border-gray-200 rounded-full border-solid border-2 p-2 hover:border-pink"><img class="w-6 h-6"
+      src="../../../../../assets/img/shopping-cart.png" alt="cart" (click)="addToCartHandler()"></button>
   <div class="mt-4">
     <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">{{product?.category}}</h3>
     <h2 class="text-gray-900 title-font text-lg font-medium">
