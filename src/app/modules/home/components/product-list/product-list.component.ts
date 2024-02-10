@@ -3,7 +3,7 @@ import { ProductItemComponent } from '../product-item/product-item.component';
 import { Product } from '../../../../models/product.model';
 import { ProductService } from '../../../../services/product.service';
 import { Subscription } from 'rxjs';
-import { CommonModule, TitleCasePipe, UpperCasePipe } from '@angular/common';
+import { CommonModule, TitleCasePipe } from '@angular/common';
 import { NotFoundComponent } from '../../../../pages/not-found/not-found.component';
 import { HeaderComponent } from '../header/header.component';
 import { CartService } from '../../../../services/cart.service';

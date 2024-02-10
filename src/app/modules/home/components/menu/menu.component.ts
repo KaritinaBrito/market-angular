@@ -5,9 +5,7 @@ import {CdkMenu, CdkMenuItem, CdkMenuTrigger} from '@angular/cdk/menu';
   selector: 'app-menu',
   standalone: true,
   imports: [CdkMenuTrigger, CdkMenu, CdkMenuItem],
-  templateUrl: './menu.component.html',
-  styleUrl: './menu.component.css'
-})
+  templateUrl: './menu.component.html'})
 export class MenuComponent {
   isOpenOverlayAvatar = false;
 
