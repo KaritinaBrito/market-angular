@@ -1,4 +1,4 @@
 export const apiServer = {
-  serverUrl: 'http://localhost/assets/data/products.json',
-  siteName : 'Little Market'
+  SERVER_URL: 'http://localhost/assets/data/products.json',
+  SITE_NAME : 'Little Market'
 }
