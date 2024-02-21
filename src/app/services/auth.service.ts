@@ -13,7 +13,7 @@ import { User } from '../models/user.model';
 export class AuthService {
   private http = inject(HttpClient);
   private tokenService = inject(TokenService);
-  apiUrl = environment.API_URL;
+  apiUrl = environment.API_URL_USERS;
 
   constructor() { }
 
